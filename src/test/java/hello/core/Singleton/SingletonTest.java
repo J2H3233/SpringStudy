@@ -1,7 +1,7 @@
 package hello.core.Singleton;
 
 import hello.core.member.MemberService;
-import hello.core.order.AppConfig;
+import hello.core.AppConfig;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

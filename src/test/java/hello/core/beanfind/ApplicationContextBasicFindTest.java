@@ -2,7 +2,7 @@ package hello.core.beanfind;
 
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
-import hello.core.order.AppConfig;
+import hello.core.AppConfig;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -37,9 +37,8 @@ public class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("빈 이름을 조회X")
     void findBeanByNameX(){
-        Object memberService = ac.getBean("xxxxxxxx", MemberService.class);
-        assertThrows(NoSuchBeanDefinitionException.class,
-                () -> ac.getBean("xxxxxx", MemberService.class));
+        //Object memberService = ac.getBean("xxxxxxxx", MemberService.class);
+        assertThrows(NoSuchBeanDefinitionException.class, () -> ac.getBean("xxxxxxxx", MemberService.class));
        // Assertions.assertThat(memberService).isInstanceOf(MemberService.class);
     }
 
